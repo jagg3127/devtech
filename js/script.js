@@ -70,9 +70,9 @@ function progress_run(term, phrase, size, token, color) {
 }
 $(function() {
     var term=$('body').terminal({
-        /*chat: wrap(function() {  
+        chat: wrap(function() {  
             firebase_chat(this, fetch_user(this.token()))
-        }, "chat"),*/
+        }, "chat"),
         current: wrap(function(data) {
             if (data==="user") {
                 echo(this, "Current user is " + fetch_user(this.token()) + " rank " + fetch_rank(this.token()) + " or " + rank(this.token) + "\n" + this.token())

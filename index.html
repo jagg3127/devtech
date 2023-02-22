@@ -35,7 +35,18 @@
 		}
 	</style>
 </head>
-<body>
-      <script src="js/script.js", type="module"></script>
-</body>
+<body><script>
+// Listen for messages from other domains.
+window.addEventListener("message", function(event) {
+  console.log(event.data);
+  if (event.origin !== "http://devtech.rf.gd")
+    return;
+
+  // Extract the message data from the event.
+  var message = event.data;
+
+  // Handle the message.
+  console.log(message);
+});
+</script></body>
 </html>
